@@ -1,0 +1,14 @@
+#!/bin/bash
+
+run_hook() {
+  echo "[network] Bringing up eth0"
+  ip link set eth0 up
+  dhclient eth0
+
+  echo "[network] Adding missing routes"
+  ip route add 10.0.2.0/24 dev eth0
+  ip route add default via 10.0.2.2 dev eth0
+
+  echo "[network] Writing DNS"
+  echo "nameserver 1.1.1.1" > /etc/resolv.conf
+}

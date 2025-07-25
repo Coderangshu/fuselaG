@@ -1,0 +1,14 @@
+#!/bin/bash
+
+build() {
+  add_binary "ip"
+  add_binary "dhclient"
+  add_file "/etc/resolv.conf"
+  add_runscript
+}
+
+help() {
+  cat <<HELPEOF
+Enables basic network using DHCP on eth0
+HELPEOF
+}
