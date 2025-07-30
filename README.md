@@ -24,9 +24,9 @@ qemu-system-x86_64 \
 ```
 
 
-To check if fuse is working
-```ls -l /dev/fuse```
-crw-rw-rw-    1 0        0          10, 229 Jul 22 11:35 /dev/fuse
+To check if fuse is working  
+```ls -l /dev/fuse```  
+crw-rw-rw-    1 0        0          10, 229 Jul 22 11:35 /dev/fuse  
 
-```fusermount --version```
-fusermount version: 2.9.9
+```fusermount --version```  
+fusermount version: 2.9.9  
